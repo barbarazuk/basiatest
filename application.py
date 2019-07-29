@@ -8,11 +8,11 @@ from sklearn.externals import joblib
 
 application = Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def home():
 	return render_template('home.html')
 
-@app.route('/predict',methods=['POST'])
+@application.route('/predict',methods=['POST'])
 def predict():
 
 	cvpkl = open('cv.pkl','rb')
