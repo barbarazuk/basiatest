@@ -6,7 +6,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.externals import joblib
 
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 @app.route('/')
 def home():
@@ -30,4 +30,4 @@ def predict():
 
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	application.run(debug=True)
